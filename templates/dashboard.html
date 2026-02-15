@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h2>Admin Dashboard</h2>
+    <form method="POST">
+        <input type="text" name="name" placeholder="Product name" required>
+        <input type="number" name="price" placeholder="Price" required>
+        <button type="submit">Add</button>
+    </form>
+
+    <h3>Products</h3>
+    <ul>
+        {% for product in products %}
+        <li>
+            {{ product[1] }} - {{ product[2] }}$
+            <a href="/delete/{{ product[0] }}">Delete</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

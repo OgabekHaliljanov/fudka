@@ -1,0 +1,16 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FastFood</title>
+</head>
+<body>
+    <h1>🍔 FastFood Menu</h1>
+    <a href="/admin">Admin</a>
+    <ul>
+        {% for product in products %}
+        <li>{{ product[1] }} - {{ product[2] }}$</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
